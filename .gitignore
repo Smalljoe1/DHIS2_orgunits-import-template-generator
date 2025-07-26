@@ -1,0 +1,3 @@
+# Ignore Excel and CSV files
+*.xlsx
+*.csv
