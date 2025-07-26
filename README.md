@@ -14,10 +14,10 @@ A robust matching system that connects schools to their appropriate administrati
 
 ## 📸 Screenshots
 
-![Data Processing View](https://via.placeholder.com/400x300?text=Data+Processing+View) <!-- Replace with actual screenshot -->
+![Results Download](image-2.png)
 *Main processing interface with progress tracking*
 
-![Results Dashboard](https://via.placeholder.com/400x300?text=Results+Dashboard) <!-- Replace with actual screenshot -->
+![Results Dashboard](image-1.png)
 *Results summary with metrics and visualizations*
 
 ## 🚀 Quick Start
@@ -55,4 +55,6 @@ Orgunits-Import-Template-Generator/
 └── sample_data/             # Example files
     ├── sample_schools.xlsx
     └── sample_wards.xlsx
+    
+    
 
