@@ -1,4 +1,4 @@
-# School-Ward Matching Tool for DHIS2
+# Orgunits_Import_Template_Generator Tool for DHIS2
 
 ![Generating template](image.png)
 
