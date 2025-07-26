@@ -29,8 +29,8 @@ A robust matching system that connects schools to their appropriate administrati
 ### Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/school-ward-matcher.git
-cd school-ward-matcher
+git clone https://github.com/Smalljoe1/DHIS2_orgunits-import-template-generator.git
+cd DHIS2_orgunits-import-template-generator
 
 # Create and activate virtual environment
 python -m venv venv
