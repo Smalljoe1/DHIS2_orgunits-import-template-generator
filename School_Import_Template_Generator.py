@@ -558,9 +558,9 @@ def main():
     # Sidebar for file uploads
     with st.sidebar:
         st.header("📂 Upload Files")
-        school_file = st.file_uploader("School Data File From State", type=["xlsx"], 
+        school_file = st.file_uploader("School List From State", type=["xlsx"], 
                                      help="Excel file containing school information from your state")
-        ward_file = st.file_uploader("Ward Data File from DHIS2", type=["xlsx"],
+        ward_file = st.file_uploader("Ward List from DHIS2", type=["xlsx"],
                                    help="Excel file with ward organizational units from DHIS2")
         state = st.text_input("State Name (for output filenames)", "State", 
                              help="Will be used to name output files (e.g., 'Lagos')").strip()

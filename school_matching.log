@@ -12812,3 +12812,81 @@ Wards exceeding school limit:
 2025-07-26 18:05:01,873 - WARNING - - nH9MtmMgHob: 64 schools
 2025-07-26 18:05:01,873 - WARNING - - LJiFXFQlOuC: 51 schools
 2025-07-26 18:05:01,873 - WARNING - - KMav8pFlcj4: 51 schools
+2025-07-26 22:35:54,166 - INFO - Data loaded successfully
+2025-07-26 22:35:54,166 - INFO - Starting matching process...
+2025-07-26 22:35:54,166 - INFO - Generating state and LGA mappings...
+2025-07-26 22:35:54,371 - INFO - Matching 3996 schools to wards...
+2025-07-26 22:37:11,359 - INFO - Successfully matched 3996 schools
+2025-07-26 22:37:11,360 - WARNING - 
+Wards exceeding school limit:
+2025-07-26 22:37:11,362 - WARNING - - dRiQaNBesqq: 386 schools
+2025-07-26 22:37:11,362 - WARNING - - UUMpvPcubGe: 277 schools
+2025-07-26 22:37:11,362 - WARNING - - Q5ZNZoNjDKM: 266 schools
+2025-07-26 22:37:11,363 - WARNING - - MtfqBZXxiNv: 233 schools
+2025-07-26 22:37:11,363 - WARNING - - tqOvKLyY6IP: 218 schools
+2025-07-26 22:37:11,363 - WARNING - - QeCLh6AdHau: 215 schools
+2025-07-26 22:37:11,363 - WARNING - - g1htAj4UlV5: 212 schools
+2025-07-26 22:37:11,363 - WARNING - - FEN5VTLW71p: 209 schools
+2025-07-26 22:37:11,363 - WARNING - - tYGDaRHpVwL: 200 schools
+2025-07-26 22:37:11,365 - WARNING - - b17PzHB51L0: 185 schools
+2025-07-26 22:37:11,365 - WARNING - - AvlB5AGauhS: 160 schools
+2025-07-26 22:37:11,365 - WARNING - - RN9IQg3AlaF: 158 schools
+2025-07-26 22:37:11,366 - WARNING - - fWBxa6k7C4e: 143 schools
+2025-07-26 22:37:11,366 - WARNING - - Q723FC4bmZ2: 138 schools
+2025-07-26 22:37:11,366 - WARNING - - QtbYfSzIj3i: 129 schools
+2025-07-26 22:37:11,366 - WARNING - - eUGNAKAcXS5: 123 schools
+2025-07-26 22:37:11,366 - WARNING - - mp8wHjV1ITq: 123 schools
+2025-07-26 22:37:11,366 - WARNING - - MeJqOl1eWnI: 123 schools
+2025-07-26 22:37:11,366 - WARNING - - ohOfvnhpr6K: 122 schools
+2025-07-26 22:37:11,366 - WARNING - - YX6QUX3WtQc: 114 schools
+2025-07-26 22:37:11,366 - WARNING - - QoCqLB75ANB: 104 schools
+2025-07-26 22:37:11,366 - WARNING - - fYnNoGkOVqT: 90 schools
+2025-07-26 22:37:11,366 - WARNING - - rdycSh57aWk: 64 schools
+2025-07-26 22:59:29,228 - INFO - Data loaded successfully
+2025-07-26 22:59:29,244 - INFO - Starting matching process...
+2025-07-26 22:59:29,244 - INFO - Generating state and LGA mappings...
+2025-07-26 22:59:29,596 - INFO - Matching 3996 schools to wards...
+2025-07-26 23:00:00,891 - INFO - Successfully matched 3496 schools
+2025-07-26 23:00:00,891 - WARNING - 500 schools could not be matched
+2025-07-26 23:00:00,891 - WARNING - 
+Wards exceeding school limit:
+2025-07-26 23:00:00,891 - WARNING - - HDY2L78Smqf: 150 schools
+2025-07-26 23:00:00,891 - WARNING - - KWj4MfxAXyf: 148 schools
+2025-07-26 23:00:00,891 - WARNING - - egBcxJ0GzFs: 143 schools
+2025-07-26 23:00:00,894 - WARNING - - ycBf5qWa4Xn: 142 schools
+2025-07-26 23:00:00,894 - WARNING - - F8Nmvuce88e: 135 schools
+2025-07-26 23:00:00,894 - WARNING - - p66quwLGs4s: 120 schools
+2025-07-26 23:00:00,894 - WARNING - - qSwI2Igtw6F: 101 schools
+2025-07-26 23:00:00,894 - WARNING - - Xb1UkkAOtZp: 95 schools
+2025-07-26 23:00:00,894 - WARNING - - Dg9cdnCziaH: 90 schools
+2025-07-26 23:00:00,894 - WARNING - - WkOZbDwpD1j: 83 schools
+2025-07-26 23:00:00,897 - WARNING - - WeGtdeklKzu: 82 schools
+2025-07-26 23:00:00,897 - WARNING - - yVcCMDZodMY: 82 schools
+2025-07-26 23:00:00,897 - WARNING - - j1xwlwtRFju: 73 schools
+2025-07-26 23:00:00,897 - WARNING - - QJkPUxy3bSj: 73 schools
+2025-07-26 23:00:00,897 - WARNING - - s6QZA7mev3e: 54 schools
+2025-07-26 23:00:00,899 - WARNING - - KWj4MfxAXoz: 51 schools
+2025-07-26 23:16:57,325 - INFO - Data loaded successfully
+2025-07-26 23:16:57,326 - INFO - Starting matching process...
+2025-07-26 23:16:57,326 - INFO - Generating state and LGA mappings...
+2025-07-26 23:16:57,520 - INFO - Matching 3499 schools to wards...
+2025-07-26 23:17:37,494 - INFO - Successfully matched 3495 schools
+2025-07-26 23:17:37,495 - WARNING - 4 schools could not be matched
+2025-07-26 23:17:37,499 - WARNING - 
+Wards exceeding school limit:
+2025-07-26 23:17:37,499 - WARNING - - HDY2L78Smqf: 150 schools
+2025-07-26 23:17:37,500 - WARNING - - KWj4MfxAXyf: 148 schools
+2025-07-26 23:17:37,500 - WARNING - - egBcxJ0GzFs: 143 schools
+2025-07-26 23:17:37,500 - WARNING - - ycBf5qWa4Xn: 142 schools
+2025-07-26 23:17:37,501 - WARNING - - F8Nmvuce88e: 135 schools
+2025-07-26 23:17:37,501 - WARNING - - p66quwLGs4s: 119 schools
+2025-07-26 23:17:37,501 - WARNING - - qSwI2Igtw6F: 101 schools
+2025-07-26 23:17:37,502 - WARNING - - Xb1UkkAOtZp: 95 schools
+2025-07-26 23:17:37,502 - WARNING - - Dg9cdnCziaH: 90 schools
+2025-07-26 23:17:37,502 - WARNING - - WkOZbDwpD1j: 83 schools
+2025-07-26 23:17:37,502 - WARNING - - WeGtdeklKzu: 82 schools
+2025-07-26 23:17:37,502 - WARNING - - yVcCMDZodMY: 82 schools
+2025-07-26 23:17:37,502 - WARNING - - j1xwlwtRFju: 73 schools
+2025-07-26 23:17:37,504 - WARNING - - QJkPUxy3bSj: 73 schools
+2025-07-26 23:17:37,504 - WARNING - - s6QZA7mev3e: 54 schools
+2025-07-26 23:17:37,504 - WARNING - - KWj4MfxAXoz: 51 schools
