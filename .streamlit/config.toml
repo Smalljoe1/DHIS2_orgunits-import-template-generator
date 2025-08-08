@@ -1,0 +1,18 @@
+[theme]
+# Main brand color (buttons, sliders, selection)
+primaryColor = "#007ACC"
+
+# Background color of main page
+backgroundColor = "#F8FAFC"
+
+# Background color of sidebar & widgets
+secondaryBackgroundColor = "#E2E8F0"
+
+# Text color
+textColor = "#1A202C"
+
+# Font style
+font = "sans serif"
+
+[browser]
+gatherUsageStats = false
