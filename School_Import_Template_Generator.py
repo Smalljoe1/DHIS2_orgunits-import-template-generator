@@ -329,7 +329,8 @@ class SchoolWardMatcher:
     def _clean_dataframe(self, df, text_columns):
         for col in text_columns:
             if col in df.columns:
-                df[f"{col}_clean"] = df[col].apply(TextProcessor.clean_text)
+                # Convert to string first, then apply cleaning
+                df[f"{col}_clean"] = df[col].astype(str).apply(TextProcessor.clean_text)
         return df
     
     def _validate_columns(self):
@@ -574,7 +575,7 @@ def main():
                                      help="Excel file containing school information from your state")
         ward_file = st.file_uploader("Ward List from DHIS2", type=["xlsx"],
                                    help="Excel file with ward organizational units from DHIS2")
-        state = st.text_input("State Name (for output filenames)", "State", 
+        state = st.text_input("State Name (for output filenames)", "", 
                              help="Will be used to name output files (e.g., 'Lagos')").strip()
         process_btn = st.button("⚡ Process Data", type="primary")
     
@@ -584,58 +585,63 @@ def main():
     with col1:
         st.header("🔧 Data Processing")
         
-        if process_btn and school_file and ward_file:
-            # Initialize progress tracking
-            progress_bar = st.progress(0)
-            status_text = st.empty()
-            
-            processor = SchoolWardMatcher()
-            st.session_state.processor = processor
-            
-            # Load data with progress updates
-            status_text.info("Loading and validating data...")
-            if processor.load_data(school_file, ward_file, state):
-                progress_bar.progress(25)
-                
-                # Process data with progress updates
-                status_text.info("Matching schools to wards...")
-                if processor.process():
-                    progress_bar.progress(75)
-                    
-                    # Generate outputs
-                    status_text.info("Preparing download files...")
-                    st.session_state.output_files = processor.get_output_files()
-                    progress_bar.progress(100)
-                    status_text.success("✅ Processing completed successfully!")
-                    
-                    # Show metrics dashboard
-                    st.subheader("📈 Results Summary")
-                    col1, col2, col3 = st.columns(3)
-                    
-                    total_schools = len(processor.schools)
-                    matched = len(processor.orgunits)
-                    unmatched = len(processor.unmatched)
-                    
-                    col1.metric("Total Schools Processed", total_schools)
-                    col2.metric("Successfully Matched", f"{matched} ({matched/total_schools*100:.1f}%)")
-                    col3.metric("Unmatched Schools", f"{unmatched} ({unmatched/total_schools*100:.1f}%)", 
-                               delta_color="inverse" if unmatched > 0 else "off")
-                    
-                    # Ward distribution visualization
-                    if processor.orgunits:
-                        ward_counts = defaultdict(int)
-                        for ou in processor.orgunits:
-                            ward_counts[ou['Parent']] += 1
-                        
-                        ward_df = pd.DataFrame.from_dict(ward_counts, orient='index', columns=['Schools'])
-                        st.write("**Schools per Ward Distribution**")
-                        st.bar_chart(ward_df['Schools'].value_counts().head(15))
-                else:
-                    status_text.error("❌ Processing failed. Check logs for details.")
+        if process_btn:
+            if not school_file or not ward_file:
+                st.error("Please upload both School and Ward files to proceed.")
+            elif not state:
+                st.error("Please enter a state name for output files.")
             else:
-                status_text.error("❌ Data loading failed. Check logs for details.")
-            
-            progress_bar.empty()
+                # Initialize progress tracking
+                progress_bar = st.progress(0)
+                status_text = st.empty()
+                
+                processor = SchoolWardMatcher()
+                st.session_state.processor = processor
+                
+                # Load data with progress updates
+                status_text.info("Loading and validating data...")
+                if processor.load_data(school_file, ward_file, state):
+                    progress_bar.progress(25)
+                    
+                    # Process data with progress updates
+                    status_text.info("Matching schools to wards...")
+                    if processor.process():
+                        progress_bar.progress(75)
+                        
+                        # Generate outputs
+                        status_text.info("Preparing download files...")
+                        st.session_state.output_files = processor.get_output_files()
+                        progress_bar.progress(100)
+                        status_text.success("✅ Processing completed successfully!")
+                        
+                        # Show metrics dashboard
+                        st.subheader("📈 Results Summary")
+                        col1, col2, col3 = st.columns(3)
+                        
+                        total_schools = len(processor.schools)
+                        matched = len(processor.orgunits)
+                        unmatched = len(processor.unmatched)
+                        
+                        col1.metric("Total Schools Processed", total_schools)
+                        col2.metric("Successfully Matched", f"{matched} ({matched/total_schools*100:.1f}%)")
+                        col3.metric("Unmatched Schools", f"{unmatched} ({unmatched/total_schools*100:.1f}%)", 
+                                   delta_color="inverse" if unmatched > 0 else "off")
+                        
+                        # Ward distribution visualization
+                        if processor.orgunits:
+                            ward_counts = defaultdict(int)
+                            for ou in processor.orgunits:
+                                ward_counts[ou['Parent']] += 1
+                            
+                            ward_df = pd.DataFrame.from_dict(ward_counts, orient='index', columns=['Schools'])
+                            st.write("**Schools per Ward Distribution**")
+                            st.bar_chart(ward_df['Schools'].value_counts().head(15))
+                    else:
+                        status_text.error("❌ Processing failed. Check logs for details.")
+                else:
+                    status_text.error("❌ Data loading failed. Check logs for details.")
+                
+                progress_bar.empty()
         
         if st.session_state.output_files:
             st.subheader("📥 Download Results")

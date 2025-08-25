@@ -13107,3 +13107,21 @@ Wards exceeding school limit:
 Wards exceeding school limit:
 2025-08-22 17:33:07,551 - WARNING - - bZ85PEiBQTO: 83 schools
 2025-08-22 17:33:07,552 - WARNING - - DIcbYKD1oDN: 63 schools
+2025-08-25 15:47:17,764 - INFO - Data loaded successfully
+2025-08-25 15:47:17,765 - INFO - Starting matching process...
+2025-08-25 15:47:17,766 - INFO - Generating state and LGA mappings...
+2025-08-25 15:47:17,861 - INFO - Matching 1180 schools to wards...
+2025-08-25 15:47:22,391 - INFO - Successfully matched 1180 schools
+2025-08-25 15:47:22,392 - WARNING - 
+Wards exceeding school limit:
+2025-08-25 15:47:22,392 - WARNING - - bZ85PEiBQTO: 83 schools
+2025-08-25 15:47:22,393 - WARNING - - DIcbYKD1oDN: 63 schools
+2025-08-25 16:08:04,322 - INFO - Data loaded successfully
+2025-08-25 16:08:04,323 - INFO - Starting matching process...
+2025-08-25 16:08:04,324 - INFO - Generating state and LGA mappings...
+2025-08-25 16:08:04,409 - INFO - Matching 1180 schools to wards...
+2025-08-25 16:08:08,616 - INFO - Successfully matched 1180 schools
+2025-08-25 16:08:08,616 - WARNING - 
+Wards exceeding school limit:
+2025-08-25 16:08:08,617 - WARNING - - bZ85PEiBQTO: 83 schools
+2025-08-25 16:08:08,617 - WARNING - - DIcbYKD1oDN: 63 schools
