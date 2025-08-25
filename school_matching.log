@@ -12938,3 +12938,172 @@ Wards exceeding school limit:
 2025-07-28 16:26:26,874 - WARNING - - QJkPUxy3bSj: 73 schools
 2025-07-28 16:26:26,874 - WARNING - - s6QZA7mev3e: 54 schools
 2025-07-28 16:26:26,876 - WARNING - - KWj4MfxAXoz: 51 schools
+2025-08-01 17:15:31,638 - INFO - Data loaded successfully
+2025-08-01 17:15:31,640 - INFO - Starting matching process...
+2025-08-01 17:15:31,640 - INFO - Generating state and LGA mappings...
+2025-08-01 17:15:31,713 - INFO - Matching 3499 schools to wards...
+2025-08-01 17:15:46,135 - INFO - Successfully matched 3495 schools
+2025-08-01 17:15:46,135 - WARNING - 4 schools could not be matched
+2025-08-01 17:15:46,135 - WARNING - 
+Wards exceeding school limit:
+2025-08-01 17:15:46,135 - WARNING - - HDY2L78Smqf: 150 schools
+2025-08-01 17:15:46,135 - WARNING - - KWj4MfxAXyf: 148 schools
+2025-08-01 17:15:46,135 - WARNING - - egBcxJ0GzFs: 143 schools
+2025-08-01 17:15:46,135 - WARNING - - ycBf5qWa4Xn: 142 schools
+2025-08-01 17:15:46,135 - WARNING - - F8Nmvuce88e: 135 schools
+2025-08-01 17:15:46,135 - WARNING - - p66quwLGs4s: 119 schools
+2025-08-01 17:15:46,135 - WARNING - - qSwI2Igtw6F: 101 schools
+2025-08-01 17:15:46,135 - WARNING - - Xb1UkkAOtZp: 95 schools
+2025-08-01 17:15:46,135 - WARNING - - Dg9cdnCziaH: 90 schools
+2025-08-01 17:15:46,135 - WARNING - - WkOZbDwpD1j: 83 schools
+2025-08-01 17:15:46,135 - WARNING - - WeGtdeklKzu: 82 schools
+2025-08-01 17:15:46,135 - WARNING - - yVcCMDZodMY: 82 schools
+2025-08-01 17:15:46,135 - WARNING - - j1xwlwtRFju: 73 schools
+2025-08-01 17:15:46,135 - WARNING - - QJkPUxy3bSj: 73 schools
+2025-08-01 17:15:46,135 - WARNING - - s6QZA7mev3e: 54 schools
+2025-08-01 17:15:46,135 - WARNING - - KWj4MfxAXoz: 51 schools
+2025-08-07 09:37:33,141 - INFO - Data loaded successfully
+2025-08-07 09:37:33,151 - INFO - Starting matching process...
+2025-08-07 09:37:33,152 - INFO - Generating state and LGA mappings...
+2025-08-07 09:37:33,351 - INFO - Matching 3499 schools to wards...
+2025-08-07 09:38:19,759 - INFO - Successfully matched 3495 schools
+2025-08-07 09:38:19,761 - WARNING - 4 schools could not be matched
+2025-08-07 09:38:19,765 - WARNING - 
+Wards exceeding school limit:
+2025-08-07 09:38:19,766 - WARNING - - HDY2L78Smqf: 150 schools
+2025-08-07 09:38:19,767 - WARNING - - KWj4MfxAXyf: 148 schools
+2025-08-07 09:38:19,768 - WARNING - - egBcxJ0GzFs: 143 schools
+2025-08-07 09:38:19,769 - WARNING - - ycBf5qWa4Xn: 142 schools
+2025-08-07 09:38:19,770 - WARNING - - F8Nmvuce88e: 135 schools
+2025-08-07 09:38:19,771 - WARNING - - p66quwLGs4s: 119 schools
+2025-08-07 09:38:19,772 - WARNING - - qSwI2Igtw6F: 101 schools
+2025-08-07 09:38:19,773 - WARNING - - Xb1UkkAOtZp: 95 schools
+2025-08-07 09:38:19,774 - WARNING - - Dg9cdnCziaH: 90 schools
+2025-08-07 09:38:19,775 - WARNING - - WkOZbDwpD1j: 83 schools
+2025-08-07 09:38:19,777 - WARNING - - WeGtdeklKzu: 82 schools
+2025-08-07 09:38:19,779 - WARNING - - yVcCMDZodMY: 82 schools
+2025-08-07 09:38:19,780 - WARNING - - j1xwlwtRFju: 73 schools
+2025-08-07 09:38:19,782 - WARNING - - QJkPUxy3bSj: 73 schools
+2025-08-07 09:38:19,783 - WARNING - - s6QZA7mev3e: 54 schools
+2025-08-07 09:38:19,784 - WARNING - - KWj4MfxAXoz: 51 schools
+2025-08-07 12:20:24,196 - ERROR - Error loading data: Can only use .str accessor with string values!
+2025-08-07 12:23:38,114 - ERROR - Error loading data: Can only use .str accessor with string values!
+2025-08-07 12:25:36,989 - ERROR - Error loading data: Can only use .str accessor with string values!
+2025-08-07 12:28:49,556 - ERROR - Error loading data: Can only use .str accessor with string values!
+2025-08-07 12:31:28,917 - ERROR - Error loading data: Can only use .str accessor with string values!
+2025-08-07 12:42:41,932 - INFO - Data loaded successfully
+2025-08-07 12:42:41,933 - INFO - Starting matching process...
+2025-08-07 12:42:41,935 - INFO - Generating state and LGA mappings...
+2025-08-07 12:42:42,174 - INFO - Matching 387 schools to wards...
+2025-08-07 12:42:45,212 - INFO - Successfully matched 338 schools
+2025-08-07 12:42:45,213 - WARNING - 49 schools could not be matched
+2025-08-07 13:44:56,984 - INFO - Data loaded successfully
+2025-08-07 13:44:56,987 - INFO - Starting matching process...
+2025-08-07 13:44:56,988 - INFO - Generating state and LGA mappings...
+2025-08-07 13:44:57,190 - INFO - Matching 387 schools to wards...
+2025-08-07 13:44:59,373 - INFO - Successfully matched 386 schools
+2025-08-07 13:44:59,373 - WARNING - 1 schools could not be matched
+2025-08-07 13:51:31,851 - INFO - Data loaded successfully
+2025-08-07 13:51:31,854 - INFO - Starting matching process...
+2025-08-07 13:51:31,855 - INFO - Generating state and LGA mappings...
+2025-08-07 13:51:32,067 - INFO - Matching 387 schools to wards...
+2025-08-07 13:51:35,810 - INFO - Successfully matched 387 schools
+2025-08-07 14:00:30,326 - INFO - Data loaded successfully
+2025-08-07 14:00:30,327 - INFO - Starting matching process...
+2025-08-07 14:00:30,327 - INFO - Generating state and LGA mappings...
+2025-08-07 14:00:30,575 - INFO - Matching 387 schools to wards...
+2025-08-07 14:00:33,244 - INFO - Successfully matched 387 schools
+2025-08-07 14:00:47,554 - INFO - Data loaded successfully
+2025-08-07 14:00:47,555 - INFO - Starting matching process...
+2025-08-07 14:00:47,555 - INFO - Generating state and LGA mappings...
+2025-08-07 14:00:47,735 - INFO - Matching 387 schools to wards...
+2025-08-07 14:00:49,864 - INFO - Successfully matched 387 schools
+2025-08-07 14:01:57,576 - INFO - Data loaded successfully
+2025-08-07 14:01:57,577 - INFO - Starting matching process...
+2025-08-07 14:01:57,577 - INFO - Generating state and LGA mappings...
+2025-08-07 14:01:57,739 - INFO - Matching 3499 schools to wards...
+2025-08-07 14:02:19,902 - INFO - Successfully matched 3495 schools
+2025-08-07 14:02:19,902 - WARNING - 4 schools could not be matched
+2025-08-07 14:02:19,903 - WARNING - 
+Wards exceeding school limit:
+2025-08-07 14:02:19,903 - WARNING - - HDY2L78Smqf: 150 schools
+2025-08-07 14:02:19,904 - WARNING - - KWj4MfxAXyf: 148 schools
+2025-08-07 14:02:19,904 - WARNING - - egBcxJ0GzFs: 143 schools
+2025-08-07 14:02:19,904 - WARNING - - ycBf5qWa4Xn: 142 schools
+2025-08-07 14:02:19,905 - WARNING - - F8Nmvuce88e: 135 schools
+2025-08-07 14:02:19,905 - WARNING - - p66quwLGs4s: 119 schools
+2025-08-07 14:02:19,905 - WARNING - - qSwI2Igtw6F: 101 schools
+2025-08-07 14:02:19,905 - WARNING - - Xb1UkkAOtZp: 95 schools
+2025-08-07 14:02:19,906 - WARNING - - Dg9cdnCziaH: 90 schools
+2025-08-07 14:02:19,906 - WARNING - - WkOZbDwpD1j: 83 schools
+2025-08-07 14:02:19,906 - WARNING - - WeGtdeklKzu: 82 schools
+2025-08-07 14:02:19,906 - WARNING - - yVcCMDZodMY: 82 schools
+2025-08-07 14:02:19,908 - WARNING - - j1xwlwtRFju: 73 schools
+2025-08-07 14:02:19,908 - WARNING - - QJkPUxy3bSj: 73 schools
+2025-08-07 14:02:19,908 - WARNING - - s6QZA7mev3e: 54 schools
+2025-08-07 14:02:19,908 - WARNING - - KWj4MfxAXoz: 51 schools
+2025-08-08 10:32:11,080 - INFO - Data loaded successfully
+2025-08-08 10:32:11,088 - INFO - Starting matching process...
+2025-08-08 10:32:11,091 - INFO - Generating state and LGA mappings...
+2025-08-08 10:32:11,328 - INFO - Matching 387 schools to wards...
+2025-08-08 10:32:14,427 - INFO - Successfully matched 387 schools
+2025-08-20 13:41:47,904 - INFO - Data loaded successfully
+2025-08-20 13:41:47,908 - INFO - Starting matching process...
+2025-08-20 13:41:47,908 - INFO - Generating state and LGA mappings...
+2025-08-20 13:41:47,988 - INFO - Matching 3651 schools to wards...
+2025-08-20 13:41:57,688 - INFO - Successfully matched 2984 schools
+2025-08-20 13:41:57,688 - WARNING - 667 schools could not be matched
+2025-08-20 13:41:57,704 - WARNING - 
+Wards exceeding school limit:
+2025-08-20 13:41:57,704 - WARNING - - RqsATah9zZ6: 317 schools
+2025-08-20 13:41:57,704 - WARNING - - PbtEp0P4TOU: 76 schools
+2025-08-20 13:41:57,704 - WARNING - - zDqoh1adUj4: 62 schools
+2025-08-20 14:55:25,909 - INFO - Data loaded successfully
+2025-08-20 14:55:25,910 - INFO - Starting matching process...
+2025-08-20 14:55:25,911 - INFO - Generating state and LGA mappings...
+2025-08-20 14:55:25,987 - INFO - Matching 688 schools to wards...
+2025-08-20 14:55:27,881 - INFO - Successfully matched 688 schools
+2025-08-20 14:55:27,882 - WARNING - 
+Wards exceeding school limit:
+2025-08-20 14:55:27,882 - WARNING - - JfnGVpDb5JB: 87 schools
+2025-08-20 15:12:51,158 - INFO - Data loaded successfully
+2025-08-20 15:12:51,159 - INFO - Starting matching process...
+2025-08-20 15:12:51,160 - INFO - Generating state and LGA mappings...
+2025-08-20 15:12:51,369 - INFO - Matching 1075 schools to wards...
+2025-08-20 15:12:55,714 - INFO - Successfully matched 1075 schools
+2025-08-20 15:12:55,714 - WARNING - 
+Wards exceeding school limit:
+2025-08-20 15:12:55,714 - WARNING - - PbtEp0P4TOU: 58 schools
+2025-08-22 16:12:09,539 - INFO - Data loaded successfully
+2025-08-22 16:12:09,543 - INFO - Starting matching process...
+2025-08-22 16:12:09,543 - INFO - Generating state and LGA mappings...
+2025-08-22 16:12:09,652 - INFO - Matching 1180 schools to wards...
+2025-08-22 16:12:09,799 - INFO - Successfully matched 0 schools
+2025-08-22 16:12:09,800 - WARNING - 1180 schools could not be matched
+2025-08-22 16:14:28,381 - INFO - Data loaded successfully
+2025-08-22 16:14:28,382 - INFO - Starting matching process...
+2025-08-22 16:14:28,383 - INFO - Generating state and LGA mappings...
+2025-08-22 16:14:28,450 - INFO - Matching 1180 schools to wards...
+2025-08-22 16:14:32,061 - INFO - Successfully matched 1180 schools
+2025-08-22 16:14:32,061 - WARNING - 
+Wards exceeding school limit:
+2025-08-22 16:14:32,061 - WARNING - - bZ85PEiBQTO: 83 schools
+2025-08-22 16:14:32,061 - WARNING - - DIcbYKD1oDN: 63 schools
+2025-08-22 17:30:28,434 - INFO - Data loaded successfully
+2025-08-22 17:30:28,444 - INFO - Starting matching process...
+2025-08-22 17:30:28,444 - INFO - Generating state and LGA mappings...
+2025-08-22 17:30:28,544 - INFO - Matching 1180 schools to wards...
+2025-08-22 17:30:33,109 - INFO - Successfully matched 1180 schools
+2025-08-22 17:30:33,109 - WARNING - 
+Wards exceeding school limit:
+2025-08-22 17:30:33,110 - WARNING - - bZ85PEiBQTO: 83 schools
+2025-08-22 17:30:33,110 - WARNING - - DIcbYKD1oDN: 63 schools
+2025-08-22 17:33:04,290 - INFO - Data loaded successfully
+2025-08-22 17:33:04,291 - INFO - Starting matching process...
+2025-08-22 17:33:04,291 - INFO - Generating state and LGA mappings...
+2025-08-22 17:33:04,362 - INFO - Matching 1180 schools to wards...
+2025-08-22 17:33:07,548 - INFO - Successfully matched 1180 schools
+2025-08-22 17:33:07,551 - WARNING - 
+Wards exceeding school limit:
+2025-08-22 17:33:07,551 - WARNING - - bZ85PEiBQTO: 83 schools
+2025-08-22 17:33:07,552 - WARNING - - DIcbYKD1oDN: 63 schools

@@ -98,6 +98,11 @@ class TextProcessor:
 class DataCleaner:
     @staticmethod
     def clean_schools(schools):
+        # Ensure string columns are properly converted
+        for col in ['school_level', 'location', 'school_name']:
+            if col in schools.columns:
+                schools[col] = schools[col].astype(str).replace('nan', '').replace('None', '')
+        
         schools['school_level'] = (
             schools['school_level']
             .str.upper()
@@ -126,6 +131,11 @@ class DataCleaner:
 
     @staticmethod
     def clean_wards(wards):
+        # Ensure string columns are properly converted
+        for col in ['state', 'lga', 'ward']:
+            if col in wards.columns:
+                wards[col] = wards[col].astype(str).replace('nan', '').replace('None', '')
+        
         for col in ['state', 'lga', 'ward']:
             if col in wards.columns:
                 wards[col] = (
@@ -135,9 +145,11 @@ class DataCleaner:
                     .str.replace(f'{col.upper()}', '', regex=False)
                     .str.strip()
                 )
+        
         if 'lga' in wards.columns:
             wards['lga'] = wards['lga'].apply(
                 lambda x: re.sub(r'^(LOCAL GOVERNMENT AREA|LGA)\s*', '', str(x)))
+        
         return wards
 
 # Matching Engine
@@ -534,7 +546,7 @@ def main():
         3. **Click 'Process Data'**: The system will:
            - Validate your files
            - Match schools to wards
-           - Generate DHIS2-compatible outputs
+           - Generate DHIS2-compatible import template.
         
         4. **Download Results**:
            - **Import Template**: For uploading to DHIS2
