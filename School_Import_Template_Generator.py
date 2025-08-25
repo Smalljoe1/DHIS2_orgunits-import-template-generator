@@ -9,6 +9,7 @@ import string
 import io
 from datetime import datetime
 
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
@@ -520,8 +521,8 @@ class SchoolWardMatcher:
 
 # Streamlit App
 def main():
-    st.set_page_config(page_title="School-Import Template Generating Tool", layout="wide")
-    st.title("📊 School-Import Template Generating Tool")
+    st.set_page_config(page_title="School-Import Template Generating Tool", layout="wide", page_icon="favicon.png")
+    st.title("School-Import Template Generating Tool")
     
     # Initialize session state
     if 'logs' not in st.session_state:
@@ -580,10 +581,10 @@ def main():
         process_btn = st.button("⚡ Process Data", type="primary")
     
     # Main content area
-    col1, col2 = st.columns([2, 1])
+    col1, col2 = st.columns([2, 1.4])
     
     with col1:
-        st.header("🔧 Data Processing")
+        st.header(" Data Processing Unit")
         
         if process_btn:
             if not school_file or not ward_file:
@@ -694,3 +695,75 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+st.markdown("""
+<style>
+/* Hide the theme selector in settings */
+[role="dialog"] [data-testid="stSelectbox"] {
+    display: none !important;
+}
+
+/* Apply custom theme globally */
+:root {
+    --primary-color: #007ACC;
+    --background-color: #FFFFFF;
+    --secondary-background-color: #F5F5F5;
+    --text-color: #000000;
+}
+
+.stApp {
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+.stButton > button {
+    background-color: var(--primary-color) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    border: none !important;
+    font-weight: bold !important;
+    transition: all 0.4s ease-in-out;
+}
+
+.stButton > button:hover {
+    background-color: #FFFFFF !important;
+    border: 1px solid var(--primary-color) !important;
+    color: #000 !important;
+}
+</style>
+""", unsafe_allow_html=True)
+
+# CSS to hide only the theme selector in settings
+hide_theme_selector = """
+    <style>
+        /* Hide the theme section in the settings dialog */
+        [data-testid="stSettingsDialogTheme"] {
+            display: none !important;
+        }
+    </style>
+"""
+st.markdown(hide_theme_selector, unsafe_allow_html=True)
+
+# Hide the deploy button in the top right
+hide_deploy = """
+    <style>
+        [data-testid="stDeployButton"] {
+            display: none !important;
+        }
+    </style>
+"""
+st.markdown(hide_deploy, unsafe_allow_html=True)
+
+# Custom CSS for the file uploader
+border_css = """
+    <style>
+        /* Target the file uploader */
+        div[data-testid="stFileUploader"] {
+            border: 1px solid var(--primary-color); 
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+"""
+st.markdown(border_css, unsafe_allow_html=True)
