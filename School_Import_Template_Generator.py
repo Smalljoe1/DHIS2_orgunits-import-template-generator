@@ -519,6 +519,133 @@ class SchoolWardMatcher:
             'unmatched_schools': (unmatched_csv, filenames['unmatched_file']) if unmatched_csv else None
         }
 
+# Template Generator
+class TemplateGenerator:
+    @staticmethod
+    def generate_state_template():
+        """Generate a template with sample data for users to follow"""
+        sample_data = [
+            {
+                'school_code': '10201103',
+                'category': 'Pre-Primary and Primary',
+                'state': 'ADAMAWA',
+                'lga': 'DEMSA',
+                'ward': 'BILLE',
+                'school_name': 'BAMUSA PRIMARY SCHOOL',
+                'prefix': 'PRY',
+                'town': 'YANGA',
+                'location': 'Rural',
+                'school_level': 'Pre-Primary and Primary',
+                'year': '2007',
+                'set_name': 'Zone A',
+            },
+            {
+                'school_code': '10201110',
+                'category': 'Pre-Primary and Primary',
+                'state': 'ADAMAWA',
+                'lga': 'DEMSA',
+                'ward': 'BILLE',
+                'school_name': 'BILLE PRIMARY SCHOOL',
+                'prefix': 'PRY',
+                'town': 'YONG USI',
+                'location': 'Rural',
+                'school_level': 'Pre-Primary and Primary',
+                'year': '1949',
+                'set_name': 'Zone A',
+            },
+            {
+                'school_code': '10201127',
+                'category': 'Pre-Primary and Primary',
+                'state': 'ADAMAWA',
+                'lga': 'DEMSA',
+                'ward': 'BILLE',
+                'school_name': 'DAKUSUNG PRIMARY SCHOOL',
+                'prefix': 'PRY',
+                'town': 'ZANGUN',
+                'location': 'Rural',
+                'school_level': 'Pre-Primary and Primary',
+                'year': '1974',
+                'set_name': 'Zone A',
+            },
+            {
+                'school_code': '',
+                'category': '',
+                'state': '',
+                'lga': '',
+                'ward': '',
+                'school_name': '',
+                'prefix': '',
+                'town': '',
+                'location': '',
+                'school_level': '',
+                'year': '',
+                'set_name': '',
+            },
+        ]
+        template_df = pd.DataFrame(sample_data)
+        return template_df
+    
+    @staticmethod
+    def generate_state_template_excel():
+        """Generate Excel template with formatting"""
+        template_df = TemplateGenerator.generate_state_template()
+        
+        # Create Excel writer object
+        output = io.BytesIO()
+        with pd.ExcelWriter(output, engine='openpyxl') as writer:
+            template_df.to_excel(writer, sheet_name='School Data', index=False)
+            
+            # Get the workbook and worksheet
+            workbook = writer.book
+            worksheet = writer.sheets['School Data']
+            
+            # Add formatting
+            from openpyxl.styles import PatternFill, Font, Alignment, Border, Side
+            
+            header_fill = PatternFill(start_color="4472C4", end_color="4472C4", fill_type="solid")
+            header_font = Font(bold=True, color="FFFFFF")
+            thin_border = Border(
+                left=Side(style='thin'),
+                right=Side(style='thin'),
+                top=Side(style='thin'),
+                bottom=Side(style='thin')
+            )
+            center_alignment = Alignment(horizontal='center', vertical='center', wrap_text=True)
+            
+            # Format headers
+            for cell in worksheet[1]:
+                cell.fill = header_fill
+                cell.font = header_font
+                cell.alignment = center_alignment
+                cell.border = thin_border
+            
+            # Set column widths and format data rows
+            column_widths = {
+                'A': 15,  # school_code
+                'B': 15,  # state
+                'C': 20,  # lga
+                'D': 15,  # ward
+                'E': 30,  # school_name
+                'F': 12,  # prefix
+                'G': 15,  # town
+                'H': 20,  # location
+                'I': 15,  # school_level
+                'J': 8,   # year
+                'K': 15,  # set_name
+            }
+            
+            for col, width in column_widths.items():
+                worksheet.column_dimensions[col].width = width
+            
+            # Format data rows
+            for row in worksheet.iter_rows(min_row=2, max_row=len(template_df) + 1):
+                for cell in row:
+                    cell.border = thin_border
+                    cell.alignment = Alignment(wrap_text=True, vertical='top')
+        
+        output.seek(0)
+        return output.getvalue()
+
 # Streamlit App
 def main():
     st.set_page_config(page_title="School-Import Template Generating Tool", layout="wide", page_icon="favicon.png")
@@ -534,25 +661,74 @@ def main():
     if 'show_guide' not in st.session_state:
         st.session_state.show_guide = True
     
+    # Template Download Section
+    with st.expander("📋 Download State List Template", expanded=False):
+        st.markdown("""
+        Use this template to organize your school data before uploading. 
+        The template includes sample data (first 3 rows) to guide you on how to fill it correctly.
+        Replace the sample data with your actual school information and add more rows as needed.
+        """)
+        
+        col_template1, col_template2 = st.columns(2)
+        with col_template1:
+            template_excel = TemplateGenerator.generate_state_template_excel()
+            st.download_button(
+                label="📥 Download Excel Template",
+                data=template_excel,
+                file_name="School_Data_Template.xlsx",
+                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                help="Download a blank Excel template to fill in your school data"
+            )
+        
+        with col_template2:
+            template_csv = TemplateGenerator.generate_state_template().to_csv(index=False).encode('utf-8')
+            st.download_button(
+                label="📥 Download CSV Template",
+                data=template_csv,
+                file_name="School_Data_Template.csv",
+                mime="text/csv",
+                help="Download a blank CSV template to fill in your school data"
+            )
+    
     # User Guide Expansion
     with st.expander("📘 User Guide - Click to Show/Hide", expanded=st.session_state.show_guide):
         st.markdown("""
         ### How to Use This Tool
         
-        1. **Upload Files** (in the sidebar):
-           - **School Data**: Excel file from your state containing school information
+        1. **Get Template** (above):
+           - Download the **State List Template** in Excel format
+           - Fill it with your school information
+        
+        2. **Upload Files** (in the sidebar):
+           - **School Data**: The Excel template you just populated
            - **Ward Data**: Excel file from DHIS2 with ward organizational units
         
-        2. **Enter State Name**: Used for naming output files (e.g., "Lagos")
+        3. **Enter State Name**: Used for naming output files (e.g., "Lagos")
         
-        3. **Click 'Process Data'**: The system will:
+        4. **Click 'Process Data'**: The system will:
            - Validate your files
            - Match schools to wards
            - Generate DHIS2-compatible import template.
         
-        4. **Download Results**:
+        5. **Download Results**:
            - **Import Template**: For uploading to DHIS2
            - **Unmatched Schools**: For reviewing unmatched records
+        
+        ### Template Columns Explained
+        | Column | Description | Example |
+        |--------|-------------|---------|
+        | **school_code** | Unique identifier for the school | 10201103 |
+        | **category** | School category/type | Pre-Primary and Primary |
+        | **state** | State name | ADAMAWA |
+        | **lga** | Local Government Area | DEMSA |
+        | **ward** | Ward name | BILLE |
+        | **school_name** | Full school name | BAMUSA PRIMARY SCHOOL |
+        | **prefix** | School type prefix | PRY, SEC, PVT |
+        | **town** | Town/City name | YANGA |
+        | **location** | Geographic location | Rural, Urban |
+        | **school_level** | Education level | Pre-Primary and Primary, Secondary |
+        | **year** | Year of establishment | 2007 |
+        | **set_name** | Zone or additional identifier | Zone A, Zone B |
         
         ### Required File Formats
         - **School Data** must contain these columns:
@@ -561,6 +737,7 @@ def main():
           ```state, lga, ward, warduid```
         
         ### Tips
+        - Download the template above to ensure correct formatting
         - Check the Activity Log for processing details
         - Review unmatched schools to improve data quality
         - For large datasets, processing may take a few minutes
