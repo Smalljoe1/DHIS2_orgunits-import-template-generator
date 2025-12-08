@@ -723,12 +723,12 @@ def main():
         | **lga** | Local Government Area | DEMSA |
         | **ward** | Ward name | BILLE |
         | **school_name** | Full school name | BAMUSA PRIMARY SCHOOL |
-        | **prefix** | School type prefix | PRY, SEC, PVT |
+        | **prefix** | School type prefix | PRY, SSS, PVT, JSS, IQS, TVET |
         | **town** | Town/City name | YANGA |
         | **location** | Geographic location | Rural, Urban |
         | **school_level** | Education level | Pre-Primary and Primary, Secondary |
         | **year** | Year of establishment | 2007 |
-        | **set_name** | Zone or additional identifier | Zone A, Zone B |
+        | **set_name** | Settlement name or zone | Zone A, Zone B |
         
         ### Required File Formats
         - **School Data** must contain these columns:
